@@ -143,7 +143,7 @@ export default function HomePage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Form submission logic would go here
-    alert('Thank you for your enquiry! We will be in touch shortly.');
+    alert('Thank you for your message! We will be in touch shortly.');
     setFormData({ name: '', email: '', phone: '', message: '' });
   };
 
@@ -182,7 +182,7 @@ export default function HomePage() {
                 onClick={() => scrollToSection('contact')}
                 className="bg-orange-500 hover:bg-orange-600 text-white px-6"
               >
-                Get a Quote
+                Contact Us
               </Button>
             </div>
 
@@ -256,7 +256,7 @@ export default function HomePage() {
                   onClick={() => scrollToSection('contact')}
                   className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-lg"
                 >
-                  Request Free Quote
+                  Get In Touch
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
                 <Button 
@@ -477,10 +477,10 @@ export default function HomePage() {
             <div>
               <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">Get In Touch</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-6">
-                Request a Free Quote
+                Let's Discuss Your Project
               </h2>
               <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                Ready to start your project? Get in touch with our team for a free, no-obligation consultation and quote.
+                Have a question or want to discuss your construction needs? Contact us today and we'll be happy to help.
               </p>
 
               <div className="space-y-6">
@@ -553,9 +553,9 @@ export default function HomePage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-slate-700 font-medium mb-2">Project Details</label>
+                      <label className="block text-slate-700 font-medium mb-2">Message</label>
                       <Textarea 
-                        placeholder="Tell us about your project..."
+                        placeholder="How can we help you?"
                         value={formData.message}
                         onChange={(e) => setFormData({...formData, message: e.target.value})}
                         className="min-h-32"
@@ -567,7 +567,7 @@ export default function HomePage() {
                       size="lg"
                       className="w-full bg-orange-500 hover:bg-orange-600 text-white py-6 text-lg"
                     >
-                      Submit Enquiry
+                      Send Message
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
                   </form>
