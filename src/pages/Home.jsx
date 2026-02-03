@@ -30,41 +30,11 @@ const COMPANY_INFO = {
   name: "Pakenham Upper Constructions Pty Ltd",
   phone: "0452 489 321",
   abn: "53131295317",
-  email: "info@pakenhamupperconstructions.com.au"
+  email: "info@pakenhamupperconstructions.com.au",
+  address: "6 Clink Rd, Pakenham Upper VIC 3810"
 };
 
-const services = [
-  {
-    icon: Home,
-    title: "Home Extensions",
-    description: "Expand your living space with expertly designed and built home extensions that seamlessly blend with your existing structure."
-  },
-  {
-    icon: Building2,
-    title: "New Home Builds",
-    description: "From foundation to finish, we construct quality homes tailored to your lifestyle and budget requirements."
-  },
-  {
-    icon: Hammer,
-    title: "Renovations",
-    description: "Transform your outdated spaces into modern, functional areas with our comprehensive renovation services."
-  },
-  {
-    icon: PaintBucket,
-    title: "Fit-Outs",
-    description: "Commercial and residential fit-outs designed to maximize functionality while maintaining aesthetic appeal."
-  },
-  {
-    icon: Wrench,
-    title: "Structural Works",
-    description: "Expert structural modifications including load-bearing wall removal, steel beam installation, and foundation work."
-  },
-  {
-    icon: Ruler,
-    title: "Custom Design",
-    description: "Work with our design team to create bespoke solutions that reflect your vision and requirements."
-  }
-];
+
 
 const processSteps = [
   {
@@ -196,7 +166,6 @@ export default function HomePage() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              <button onClick={() => scrollToSection('services')} className="text-slate-600 hover:text-orange-500 transition-colors font-medium">Services</button>
               <button onClick={() => scrollToSection('process')} className="text-slate-600 hover:text-orange-500 transition-colors font-medium">Process</button>
               <button onClick={() => scrollToSection('projects')} className="text-slate-600 hover:text-orange-500 transition-colors font-medium">Projects</button>
               <button onClick={() => scrollToSection('about')} className="text-slate-600 hover:text-orange-500 transition-colors font-medium">About</button>
@@ -235,7 +204,6 @@ export default function HomePage() {
             className="md:hidden bg-white border-t border-slate-100 py-4 px-4"
           >
             <div className="flex flex-col gap-4">
-              <button onClick={() => scrollToSection('services')} className="text-left text-slate-600 hover:text-orange-500 py-2">Services</button>
               <button onClick={() => scrollToSection('process')} className="text-left text-slate-600 hover:text-orange-500 py-2">Process</button>
               <button onClick={() => scrollToSection('projects')} className="text-left text-slate-600 hover:text-orange-500 py-2">Projects</button>
               <button onClick={() => scrollToSection('about')} className="text-left text-slate-600 hover:text-orange-500 py-2">About</button>
@@ -328,42 +296,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">Our Services</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-3 mb-4">
-              Comprehensive Construction Solutions
-            </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-              From concept to completion, we deliver exceptional results across a wide range of construction services.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className="h-full hover:shadow-xl transition-all duration-300 border-0 bg-white group">
-                  <CardContent className="p-8">
-                    <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors">
-                      <service.icon className="w-7 h-7 text-orange-500 group-hover:text-white transition-colors" />
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{service.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Process Section */}
       <section id="process" className="py-24 bg-slate-900">
@@ -566,8 +499,8 @@ export default function HomePage() {
                     <MapPin className="w-6 h-6 text-orange-500" />
                   </div>
                   <div>
-                    <p className="text-slate-400 text-sm">Service Area</p>
-                    <p className="text-white font-semibold text-lg">Melbourne's South-East</p>
+                    <p className="text-slate-400 text-sm">Address</p>
+                    <p className="text-white font-semibold text-lg">{COMPANY_INFO.address}</p>
                   </div>
                 </div>
 
