@@ -212,44 +212,44 @@ export default function HomePage() {
             alt="Construction site"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/85 to-slate-900/60" />
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
           <div className="max-w-2xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                <HardHat className="w-4 h-4" />
+              <span className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-400 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+                <HardHat className="w-3 h-3 sm:w-4 sm:h-4" />
                 Licensed Building Practitioners
               </span>
               
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
                 Building Your Vision,
                 <span className="text-orange-500"> One Brick at a Time</span>
               </h1>
               
-              <p className="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-6 sm:mb-8 leading-relaxed">
                 Specialising in home extensions, renovations, and new builds across Melbourne's south-east. 
                 Quality craftsmanship with transparent pricing and on-time delivery.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Button 
                   size="lg"
                   onClick={() => scrollToSection('contact')}
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-lg"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg w-full sm:w-auto"
                 >
                   Get In Touch
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                 </Button>
                 <Button 
                   size="lg"
                   onClick={() => scrollToSection('projects')}
-                  className="bg-white text-slate-900 hover:bg-slate-100 px-8 py-6 text-lg font-semibold"
+                  className="bg-white text-slate-900 hover:bg-slate-100 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto"
                 >
                   View Our Work
                 </Button>
@@ -260,23 +260,23 @@ export default function HomePage() {
 
         {/* Stats Bar */}
         <div className="absolute bottom-0 left-0 right-0 bg-white/10 backdrop-blur-sm border-t border-white/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 text-center">
               <div>
-                <p className="text-3xl font-bold text-white">15+</p>
-                <p className="text-slate-300 text-sm">Years Experience</p>
+                <p className="text-2xl sm:text-3xl font-bold text-white">15+</p>
+                <p className="text-slate-300 text-xs sm:text-sm">Years Experience</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-white">200+</p>
-                <p className="text-slate-300 text-sm">Projects Completed</p>
+                <p className="text-2xl sm:text-3xl font-bold text-white">200+</p>
+                <p className="text-slate-300 text-xs sm:text-sm">Projects Completed</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-white">100%</p>
-                <p className="text-slate-300 text-sm">Client Satisfaction</p>
+                <p className="text-2xl sm:text-3xl font-bold text-white">100%</p>
+                <p className="text-slate-300 text-xs sm:text-sm">Client Satisfaction</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-white">5★</p>
-                <p className="text-slate-300 text-sm">Google Rating</p>
+                <p className="text-2xl sm:text-3xl font-bold text-white">5★</p>
+                <p className="text-slate-300 text-xs sm:text-sm">Google Rating</p>
               </div>
             </div>
           </div>
