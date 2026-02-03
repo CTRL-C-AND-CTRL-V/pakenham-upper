@@ -471,7 +471,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <a href={`tel:${COMPANY_INFO.phone}`} className="group">
               <Card className="border-0 bg-slate-800 hover:bg-slate-700 transition-all h-full">
                 <CardContent className="p-8 text-center">
@@ -483,18 +483,6 @@ export default function HomePage() {
                 </CardContent>
               </Card>
             </a>
-
-            <div>
-              <Card className="border-0 bg-slate-800 h-full">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="w-8 h-8 text-orange-500" />
-                  </div>
-                  <p className="text-slate-400 text-sm mb-2">Visit Us</p>
-                  <p className="text-white font-bold text-lg">{COMPANY_INFO.address}</p>
-                </CardContent>
-              </Card>
-            </div>
 
             <div>
               <Card className="border-0 bg-slate-800 h-full">
