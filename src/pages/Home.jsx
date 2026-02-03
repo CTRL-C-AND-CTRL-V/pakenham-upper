@@ -293,9 +293,8 @@ export default function HomePage() {
                 </Button>
                 <Button 
                   size="lg"
-                  variant="outline"
                   onClick={() => scrollToSection('projects')}
-                  className="border-white text-white hover:bg-white hover:text-slate-900 px-8 py-6 text-lg transition-all"
+                  className="bg-white text-slate-900 hover:bg-slate-100 px-8 py-6 text-lg font-semibold"
                 >
                   View Our Work
                 </Button>
