@@ -215,7 +215,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/85 to-slate-900/60" />
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 pb-40 sm:pb-32">
           <div className="max-w-2xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -237,7 +237,7 @@ export default function HomePage() {
                 Quality craftsmanship with transparent pricing and on-time delivery.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6">
                 <Button 
                   size="lg"
                   onClick={() => scrollToSection('contact')}
