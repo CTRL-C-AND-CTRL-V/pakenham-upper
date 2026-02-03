@@ -128,23 +128,10 @@ const projects = [
 
 export default function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
 
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     setMobileMenuOpen(false);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Form submission logic would go here
-    alert('Thank you for your message! We will be in touch shortly.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
   };
 
   return (
@@ -473,107 +460,64 @@ export default function HomePage() {
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div>
-              <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">Get In Touch</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-6">
-                Let's Discuss Your Project
-              </h2>
-              <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                Have a question or want to discuss your construction needs? Contact us today and we'll be happy to help.
-              </p>
+          <div className="text-center mb-12">
+            <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">Get In Touch</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-6">
+              Ready to Start Your Project?
+            </h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+              Contact us today for a free quote and consultation. We're here to bring your construction vision to life.
+            </p>
+          </div>
 
-              <div className="space-y-6">
-                <a href={`tel:${COMPANY_INFO.phone}`} className="flex items-center gap-4 group">
-                  <div className="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500 transition-colors">
-                    <Phone className="w-6 h-6 text-orange-500 group-hover:text-white transition-colors" />
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <a href={`tel:${COMPANY_INFO.phone}`} className="group">
+              <Card className="border-0 bg-slate-800 hover:bg-slate-700 transition-all h-full">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-500 transition-colors">
+                    <Phone className="w-8 h-8 text-orange-500 group-hover:text-white transition-colors" />
                   </div>
-                  <div>
-                    <p className="text-slate-400 text-sm">Call Us</p>
-                    <p className="text-white font-semibold text-lg">{COMPANY_INFO.phone}</p>
-                  </div>
-                </a>
-
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-orange-500" />
-                  </div>
-                  <div>
-                    <p className="text-slate-400 text-sm">Address</p>
-                    <p className="text-white font-semibold text-lg">{COMPANY_INFO.address}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-orange-500" />
-                  </div>
-                  <div>
-                    <p className="text-slate-400 text-sm">ABN</p>
-                    <p className="text-white font-semibold text-lg">{COMPANY_INFO.abn}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  <p className="text-slate-400 text-sm mb-2">Call Us</p>
+                  <p className="text-white font-bold text-xl">{COMPANY_INFO.phone}</p>
+                </CardContent>
+              </Card>
+            </a>
 
             <div>
-              <Card className="border-0 shadow-2xl">
-                <CardContent className="p-8">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
-                      <label className="block text-slate-700 font-medium mb-2">Your Name</label>
-                      <Input 
-                        placeholder="John Smith"
-                        value={formData.name}
-                        onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        className="h-12"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-slate-700 font-medium mb-2">Email Address</label>
-                      <Input 
-                        type="email"
-                        placeholder="john@example.com"
-                        value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        className="h-12"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-slate-700 font-medium mb-2">Phone Number</label>
-                      <Input 
-                        type="tel"
-                        placeholder="0400 000 000"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                        className="h-12"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-slate-700 font-medium mb-2">Message</label>
-                      <Textarea 
-                        placeholder="How can we help you?"
-                        value={formData.message}
-                        onChange={(e) => setFormData({...formData, message: e.target.value})}
-                        className="min-h-32"
-                        required
-                      />
-                    </div>
-                    <Button 
-                      type="submit"
-                      size="lg"
-                      className="w-full bg-orange-500 hover:bg-orange-600 text-white py-6 text-lg"
-                    >
-                      Send Message
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </Button>
-                  </form>
+              <Card className="border-0 bg-slate-800 h-full">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <MapPin className="w-8 h-8 text-orange-500" />
+                  </div>
+                  <p className="text-slate-400 text-sm mb-2">Visit Us</p>
+                  <p className="text-white font-bold text-lg">{COMPANY_INFO.address}</p>
                 </CardContent>
               </Card>
             </div>
+
+            <div>
+              <Card className="border-0 bg-slate-800 h-full">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-orange-500" />
+                  </div>
+                  <p className="text-slate-400 text-sm mb-2">ABN</p>
+                  <p className="text-white font-bold text-xl">{COMPANY_INFO.abn}</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <a href={`tel:${COMPANY_INFO.phone}`}>
+              <Button 
+                size="lg"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 text-lg"
+              >
+                Call for a Free Quote
+                <Phone className="w-5 h-5 ml-2" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
