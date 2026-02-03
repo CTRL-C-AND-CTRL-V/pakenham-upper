@@ -418,7 +418,7 @@ export default function HomePage() {
 
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=1000&fit=crop"
+                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=1000&fit=crop"
                 alt="Construction team"
                 className="rounded-2xl shadow-2xl"
               />
