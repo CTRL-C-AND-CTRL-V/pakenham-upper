@@ -227,7 +227,7 @@ export default function HomePage() {
                 Licensed Building Practitioners
               </span>
               
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-snug md:leading-loose mb-4 sm:mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-snug md:leading-[2.2] mb-4 sm:mb-6">
                 Building Your Vision,
                 <span className="text-orange-500"> One Brick at a Time</span>
               </h1>
